@@ -16,16 +16,13 @@ public class Hooks {
     @Before
     public void before(Scenario scenario)
     {
-        System.out.println("Scenario started");
-        System.out.println("Scenario Id : " + scenario.getId());
-        System.out.println("Scenario Name : " +scenario.getName());
+        System.out.println("Scenario:"+scenario.getName()+" has been started");
     }
 
     @After
     public void after(Scenario scenario)
     {
-        System.out.println("Scenario finished");
-        System.out.println("The result of the Scenario : " + scenario.getStatus());
+        System.out.println(scenario.getName() + " : " + scenario.getStatus());
 
         Date now=new Date();
         SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH_mm_ss");
