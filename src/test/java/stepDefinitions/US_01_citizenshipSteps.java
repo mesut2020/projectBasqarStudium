@@ -1,18 +1,17 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.DialogContent;
-import pages._01_citizenshipPOM;
+import pages.US_01_citizenshipPOM;
 
 import java.util.List;
 
-public class _01_citizenshipSteps {
+public class US_01_citizenshipSteps {
 
-    _01_citizenshipPOM citizenshipPOM = new _01_citizenshipPOM();
+    US_01_citizenshipPOM citizenshipPOM = new US_01_citizenshipPOM();
     DialogContent dialogContent = new DialogContent();
 
     @When("^user clicks on the element on the citizenshipPOM$")
@@ -34,10 +33,6 @@ public class _01_citizenshipSteps {
         }
     }
 
-    @Then("^user sees the message \"([^\"]*)\"$")
-    public void userSeesTheMessage(String data)  {
-        dialogContent.findElementAndFindVerifyContainsText("message", data);
-    }
 
     @When("^user edits \"([^\"]*)\"$")
     public void userEdits(String data) {
@@ -47,5 +42,15 @@ public class _01_citizenshipSteps {
     @When("^user deletes \"([^\"]*)\"$")
     public void userDeletes(String data)  {
         citizenshipPOM.deleteItemFunction(data);
+    }
+
+    @Then("^user should see the message \"([^\"]*)\"$")
+    public void userShouldSeeTheMessage(String data) {
+        dialogContent.findElementAndFindVerifyContainsText("message", data);
+    }
+
+    @Then("^\"([^\"]*)\" shouldn't be deleted$")
+    public void shouldnTBeDeleted(String data) {
+        citizenshipPOM.isItemExist(data);
     }
 }

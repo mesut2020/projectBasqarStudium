@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class _01_citizenshipPOM extends Parent {
+public class US_01_citizenshipPOM extends Parent {
 
     WebElement element;
 
-    public _01_citizenshipPOM(){
+    public US_01_citizenshipPOM(){
         PageFactory.initElements(driver, this);
     }
 
@@ -45,9 +45,6 @@ public class _01_citizenshipPOM extends Parent {
             case "saveButton" : element = saveButton; break;
             case "yesButton" : element = yesButton; break;
             case "noButton" : element = noButton; break;
-
-
-
         }
         clickFunction(element);
     }
@@ -86,6 +83,17 @@ public class _01_citizenshipPOM extends Parent {
         }
     }
 
+    public void isItemExist(String value){
+        sendKeysFunction(searchName, value);
+        clickFunction(searchButton);
 
+        for (int i = 0; i < nameList.size(); i++) {
+            if(nameList.get(i).getText().equalsIgnoreCase(value)) {
+                System.out.println(nameList.get(i).getText() + " has been found...");
+                element=nameList.get(i);break;
+            }
+        }
+        verifyElementContainsText(element, value);
+    }
 
 }

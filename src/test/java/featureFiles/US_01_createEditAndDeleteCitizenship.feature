@@ -20,12 +20,12 @@ Feature: User should be able to use Citizenship Page functionality
 
     And user enters data on page citizenshipPOM
       | name      | FYR of Macedonia |
-      | shortName | MAC              |
+      | shortName | FYROM            |
 
     And user clicks on the element on the citizenshipPOM
       | saveButton |
 
-    Then user sees the message "Citizenship successfully created"
+    Then user should see the message "Citizenship successfully created"
 
   Scenario: User should be able to update an existing citizenship
     When user clicks on the element on the citizenshipPOM
@@ -33,7 +33,7 @@ Feature: User should be able to use Citizenship Page functionality
       | parameters   |
       | citizenships |
 
-    When user edits "FYR of Macedonia"
+    And user edits "FYR of Macedonia"
 
     And user enters data on page citizenshipPOM
       | name      | MNG Mongolia |
@@ -42,7 +42,7 @@ Feature: User should be able to use Citizenship Page functionality
     And user clicks on the element on the citizenshipPOM
       | saveButton |
 
-    Then user sees the message "Citizenship successfully updated"
+    Then user should see the message "Citizenship successfully updated"
 
   Scenario: User should be able to delete an existing citizenship
     When user clicks on the element on the citizenshipPOM
@@ -55,12 +55,14 @@ Feature: User should be able to use Citizenship Page functionality
     And user clicks on the element on the citizenshipPOM
       | noButton |
 
+    Then "MNG Mongolia" shouldn't be deleted
+
     And user deletes "MNG Mongolia"
 
     And user clicks on the element on the citizenshipPOM
       | yesButton |
 
-    Then user sees the message "Citizenship successfully deleted"
+    Then user should see the message "Citizenship successfully deleted"
 
 
 
