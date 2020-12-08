@@ -14,7 +14,7 @@ public class Driver {
     {
         if (threadBrowserName.get()==null)
         {
-            threadBrowserName.set("chrome");
+            threadBrowserName.set("firefox");
         }
 
 
