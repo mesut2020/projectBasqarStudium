@@ -39,4 +39,8 @@ public class US_03_FeesStepDefinition {
     }
 
 
+    @Then("^\"([^\"]*)\" should be in the list$")
+    public void shouldBeInTheList(String text)  {
+us_03_feesPage.findElementAndFindVerifyContainsText("name",text);
+    }
 }

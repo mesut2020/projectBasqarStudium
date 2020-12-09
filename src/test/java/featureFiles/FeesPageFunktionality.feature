@@ -1,7 +1,7 @@
 Feature: Fees Page Funktionality
 
 
-  Scenario: Creat a Fee
+  Background:
 
     Given Navigate to basqar
     When User sending the keys in the dialog content class
@@ -10,10 +10,11 @@ Feature: Fees Page Funktionality
 
     And User click on the element in the dialog content class
       | loginButton |
-      | gotItBtn    |
+      | gotItButton    |
 
     Then User should login successfullyfully
 
+  Scenario: User should be able to create a new Fee Type
 
     When user click on the element in the FeesPage
     |setup     |
@@ -30,7 +31,15 @@ Feature: Fees Page Funktionality
     When user click on the element in the FeesPage
     |formSave   |
 
-    Then "fee type successfully created" message should be displayed
+    Then "Fee Type successfully created" message should be displayed
+
+
+  Scenario: User should be able to update an existent Fee Type
+
+    When user click on the element in the FeesPage
+      |setup     |
+      |parameters|
+      |fees      |
 
     When user send the keys on the element in the FeesPage
       |searchName| KDV    |
@@ -47,11 +56,38 @@ Feature: Fees Page Funktionality
     When user click on the element in the FeesPage
       |formSave   |
 
+    Then "fee type successfully updated" message should be displayed
+
+  Scenario: User should be able to search a Fee Type
+
+    When user click on the element in the FeesPage
+      |setup     |
+      |parameters|
+      |fees      |
+
     When user send the keys on the element in the FeesPage
       |searchName| OTV    |
 
     When user click on the element in the FeesPage
       |searchButton  |
+
+    Then "OTV" should be in the list
+
+
+  Scenario: User should be able to delete an existent Fee Type
+
+    When user click on the element in the FeesPage
+      |setup     |
+      |parameters|
+      |fees      |
+
+    When user send the keys on the element in the FeesPage
+      |searchName| OTV    |
+
+    When user click on the element in the FeesPage
+      |searchButton  |
+
+    When user click on the element in the FeesPage
       |deleteButton  |
       |yesButton     |
 

@@ -46,8 +46,8 @@ public class US_03_FeesPage extends Parent {
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
     private WebElement searchName;
 
-    @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[1]")
-    private WebElement searchButton; // problem cikabilr????
+    @FindBy(css = "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-accent']")
+    private WebElement searchButton;
 
     @FindBy(xpath = "//ms-edit-button/button") //?
     private WebElement formEditButton;
@@ -58,6 +58,8 @@ public class US_03_FeesPage extends Parent {
     @FindBy(css = "button[type='submit']")
     private WebElement yesButton;
 
+    @FindBy(css = "tbody>tr>td:nth-child(2)")
+    private WebElement name;
 
 
     WebElement myElement;
@@ -141,6 +143,10 @@ public class US_03_FeesPage extends Parent {
 
             case "mesaj":
                 myElement = mesaj;
+                break;
+
+            case "name":
+                myElement = name;
                 break;
         }
         if (myElement.getText().length() > 0)
