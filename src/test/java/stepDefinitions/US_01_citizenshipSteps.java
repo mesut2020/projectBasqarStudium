@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -53,4 +54,10 @@ public class US_01_citizenshipSteps {
     public void shouldnTBeDeleted(String data) {
         citizenshipPOM.isItemExist(data);
     }
+
+    @Then("^\"([^\"]*)\" should be not clickable$")
+    public void shouldBeNotClickable(String data)  {
+        citizenshipPOM.isClickable(data);
+    }
+
 }

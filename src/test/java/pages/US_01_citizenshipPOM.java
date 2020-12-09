@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -26,12 +27,12 @@ public class US_01_citizenshipPOM extends Parent {
     @FindBy(css = "button[type='submit']") private WebElement yesButton;
     @FindBy(xpath = "//span[text()=' No ']") private WebElement noButton;
 
-    @FindAll({    @FindBy(css = "ms-edit-button.ng-star-inserted>button")     }) private List<WebElement> editButtons;
-    @FindAll({    @FindBy(css = "ms-delete-button.ng-star-inserted>button")   }) private List<WebElement> deleteButtons;
-
     @FindBy(css = "input.mat-input-element.mat-form-field-autofill-control") private WebElement searchName;
     @FindBy(css = "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-accent']") private WebElement searchButton;
+
     @FindAll({ @FindBy (css = "tbody>tr>td:nth-child(2)") })  private List<WebElement> nameList;
+    @FindAll({    @FindBy(css = "ms-edit-button.ng-star-inserted>button")     }) private List<WebElement> editButtons;
+    @FindAll({    @FindBy(css = "ms-delete-button.ng-star-inserted>button")   }) private List<WebElement> deleteButtons;
 
 
     public void findElementAndClick(String elementName){
@@ -68,7 +69,6 @@ public class US_01_citizenshipPOM extends Parent {
                 clickFunction(deleteButtons.get(i));break;
             }
         }
-
     }
 
     public void editItemFunction(String value){
@@ -89,11 +89,19 @@ public class US_01_citizenshipPOM extends Parent {
 
         for (int i = 0; i < nameList.size(); i++) {
             if(nameList.get(i).getText().equalsIgnoreCase(value)) {
-                System.out.println(nameList.get(i).getText() + " has been found...");
+                System.out.println(value + " is already exist...");
                 element=nameList.get(i);break;
             }
         }
         verifyElementContainsText(element, value);
+    }
+
+    public void isClickable(String data){
+        switch (data){
+            case "saveButton": element=saveButton;break;
+        }
+        System.out.println(data + " is clickable : " + element.isEnabled() );
+        Assert.assertFalse(element.isEnabled());
     }
 
 }

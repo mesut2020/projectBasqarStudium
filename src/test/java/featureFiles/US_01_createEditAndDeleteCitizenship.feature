@@ -18,9 +18,23 @@ Feature: User should be able to use Citizenship Page functionality
       | citizenships |
       | addButton    |
 
+    Then "saveButton" should be not clickable
+
     And user enters data on page citizenshipPOM
-      | name      | FYR of Macedonia |
-      | shortName | FYROM            |
+      | shortName | FYROM |
+
+    Then "saveButton" should be not clickable
+
+    And user enters data on page citizenshipPOM
+      | name | !@#$%^&*123 |
+
+    And user clicks on the element on the citizenshipPOM
+      | saveButton |
+
+    Then user should see the message "error"
+
+    And user enters data on page citizenshipPOM
+      | name | FYR of Macedonia |
 
     And user clicks on the element on the citizenshipPOM
       | saveButton |
@@ -64,9 +78,24 @@ Feature: User should be able to use Citizenship Page functionality
 
     Then user should see the message "Citizenship successfully deleted"
 
+  Scenario: User should not be able to create a new citizenship with a name that contains special characters and numbers
 
+    When user clicks on the element on the citizenshipPOM
+      | setup        |
+      | parameters   |
+      | citizenships |
+      | addButton    |
 
+    And user enters data on page citizenshipPOM
+      | shortName | FYROM |
 
+    And user enters data on page citizenshipPOM
+      | name | !@#$%^&*123 |
+
+    And user clicks on the element on the citizenshipPOM
+      | saveButton |
+
+    Then user should see the message "Error! Name is invalid, please enter only letters"
 
 
 
