@@ -26,14 +26,6 @@ Feature: User should be able to use Citizenship Page functionality
     Then "saveButton" should be not clickable
 
     And user enters data on page citizenshipPOM
-      | name | !@#$%^&*123 |
-
-    And user clicks on the element on the citizenshipPOM
-      | saveButton |
-
-    Then user should see the message "error"
-
-    And user enters data on page citizenshipPOM
       | name | FYR of Macedonia |
 
     And user clicks on the element on the citizenshipPOM

@@ -30,7 +30,7 @@ public class US_01_citizenshipPOM extends Parent {
     @FindBy(css = "input.mat-input-element.mat-form-field-autofill-control") private WebElement searchName;
     @FindBy(css = "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-accent']") private WebElement searchButton;
 
-    @FindAll({ @FindBy (css = "tbody>tr>td:nth-child(2)") })  private List<WebElement> nameList;
+    @FindAll({ @FindBy (css = "tbody>tr>td:nth-child(2)")   })  private List<WebElement> nameList;
     @FindAll({    @FindBy(css = "ms-edit-button.ng-star-inserted>button")     }) private List<WebElement> editButtons;
     @FindAll({    @FindBy(css = "ms-delete-button.ng-star-inserted>button")   }) private List<WebElement> deleteButtons;
 
