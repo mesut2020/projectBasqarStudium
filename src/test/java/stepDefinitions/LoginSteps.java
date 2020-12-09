@@ -60,4 +60,9 @@ public class LoginSteps {
         dialogContent.findElementAndFindVerifyContainsText("dashboard","Dashboard");
 
     }
+
+    @Then("^User should login successfullyfully$")
+    public void userShouldLoginSuccessfullyfully() {
+
+    }
 }
