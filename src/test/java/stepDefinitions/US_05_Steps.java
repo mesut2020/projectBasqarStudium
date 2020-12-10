@@ -42,6 +42,12 @@ public class US_05_Steps {
         pom.editAndDeleteFunction(editorDelete,value);
     }
 
+    @Then("^Check if \"([^\"]*)\" is not active$")
+    public void checkIfIsNotActive(String element) {
+
+        pom.findElementCheckAktiv(element);
+
+    }
 
 
 }

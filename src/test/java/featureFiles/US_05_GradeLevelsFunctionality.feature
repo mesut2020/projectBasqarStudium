@@ -62,3 +62,17 @@ Feature: Grade Levels Functionality
       | yesButton |
 
     Then User should see "successfully" message Grade Levels
+
+  Scenario:  Negative Test a Grade Level
+
+    When User click on the element Grade Levels
+      | setup       |
+      | parameters  |
+      | gradeLevels |
+      | addButton   |
+
+    And User sending the keys Grade Levels
+      | shortName | Study  |
+      | order     | 1      |
+
+    Then Check if "saveButton" is not active

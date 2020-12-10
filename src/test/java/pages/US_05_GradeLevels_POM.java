@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -90,5 +91,15 @@ public class US_05_GradeLevels_POM extends Parent{
                 break;
             }
         }
+    }
+
+    public void findElementCheckAktiv(String element){
+        switch (element){
+            case "saveButton" : myElement = saveButton; break;
+
+        }
+
+        Assert.assertTrue(myElement.isDisplayed());
+        Assert.assertFalse(myElement.isEnabled());
     }
 }
