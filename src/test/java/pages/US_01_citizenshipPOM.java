@@ -113,5 +113,4 @@ public class US_01_citizenshipPOM extends Parent {
         System.out.println(data + " is clickable : " + element.isEnabled() );
         Assert.assertFalse(element.isEnabled());
     }
-
 }

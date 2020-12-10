@@ -88,9 +88,3 @@ Feature: User should be able to use Citizenship Page functionality
       | saveButton |
 
     Then user should see the message "Error! Name is invalid, please enter only letters"
-
-
-
-
-
-
