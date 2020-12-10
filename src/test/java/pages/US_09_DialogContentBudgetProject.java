@@ -9,11 +9,11 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class DialogContentBudgetProject extends Parent {
+public class US_09_DialogContentBudgetProject extends Parent {
 
     WebElement myElement;
 
-    public DialogContentBudgetProject() {
+    public US_09_DialogContentBudgetProject() {
 
         PageFactory.initElements(driver, this);
     }

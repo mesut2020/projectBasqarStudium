@@ -1,24 +1,19 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import pages.DialogContentBudgetProject;
-import utilities.Driver;
+import pages.US_09_DialogContentBudgetProject;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class _09_BudgetProjectsPageFunctionalitySteps {
+public class US_09_BudgetProjectsPageFunctionalitySteps {
 
     WebDriver driver;
-    DialogContentBudgetProject dContent =new DialogContentBudgetProject();
+    US_09_DialogContentBudgetProject dContent =new US_09_DialogContentBudgetProject();
 
     @When("^User click on the element at Budget Project$")
     public void userClickOnTheElementAtBudgetProject(DataTable elements) {
