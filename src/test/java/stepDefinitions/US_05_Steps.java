@@ -1,18 +1,19 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.US_05_POM;
+import pages.US_05_GradeLevels_POM;
 
 import java.util.List;
 
 public class US_05_Steps {
-    US_05_POM pom = new US_05_POM();
+    US_05_GradeLevels_POM pom = new US_05_GradeLevels_POM();
 
-    @When("^User click on the element$")
-    public void userClickOnTheElement(DataTable elements) {
+    @When("^User click on the element Grade Levels$")
+    public void userClickOnTheElementGradeLevels(DataTable elements) {
         List<String> elementList=elements.asList(String.class);
 
         for (int i = 0; i < elementList.size(); i++) {
@@ -21,20 +22,18 @@ public class US_05_Steps {
         }
 
     }
-
-    @And("^User sending the keys$")
-    public void userSendingTheKeys(DataTable elements) {
+    @And("^User sending the keys Grade Levels$")
+    public void userSendingTheKeysGradeLevels(DataTable elements) {
 
         List<List<String>> elementsNameAndValue=elements.asLists(String.class);
 
         for(int i=0;i<elementsNameAndValue.size();i++) {
             pom.findElementAndSendKeysFunction(elementsNameAndValue.get(i).get(0),elementsNameAndValue.get(i).get(1));
         }
-
     }
 
-    @Then("^User should see \"([^\"]*)\" message$")
-    public void userShouldSeeMessage(String message)  {
+    @Then("^User should see \"([^\"]*)\" message Grade Levels$")
+    public void userShouldSeeMessageGradeLevels(String message)  {
         pom.findElementAndFindVerifyContainsText("success/error", message);
     }
 
@@ -42,4 +41,7 @@ public class US_05_Steps {
     public void user(String editorDelete, String value)  {
         pom.editAndDeleteFunction(editorDelete,value);
     }
+
+
+
 }
