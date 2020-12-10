@@ -2,7 +2,12 @@ Feature: User should be able to use Budget Projects Page functionality.(Budget-S
 
   Background:
     Given Navigate to basqar
-    When Enter username and password and click Login button
+    When User sending the keys in the dialog content class
+      | username | daulet2030@gmail.com |
+      | password | TechnoStudy123@      |
+    And User click on the element in the dialog content class
+      | loginButton |
+      | gotItButton |
     Then User should login successfully
 
   Scenario: US_09 TC_01 User should be able to view Position Budget Projects page

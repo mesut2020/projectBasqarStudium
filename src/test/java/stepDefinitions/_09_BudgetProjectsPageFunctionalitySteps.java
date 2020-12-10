@@ -20,35 +20,6 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
     WebDriver driver;
     DialogContentBudgetProject dContent =new DialogContentBudgetProject();
 
-    @Given("^Navigate to basqar$")
-    public void navigateToBasqar() {
-
-        driver= Driver.getDriver();
-        driver.get("https://test.basqar.techno.study/");
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-
-    }
-
-    @When("^Enter username and password and click Login button$")
-    public void enterUsernameAndPasswordAndClickLoginButton() {
-
-        dContent.findElementAndSendKeysFunction("username","daulet2030@gmail.com");
-        dContent.findElementAndSendKeysFunction("password","TechnoStudy123@");
-        dContent.findElementAndClickFunction("loginButton");
-        dContent.findElementAndClickFunction("gotItButton");
-
-    }
-
-    @Then("^User should login successfully$")
-    public void userShouldLoginSuccessfully() {
-
-        dContent.findElementAndFindVerifyContainsText("dashboard","Dashboard");
-
-    }
-
     @When("^User click on the element at Budget Project$")
     public void userClickOnTheElementAtBudgetProject(DataTable elements) {
 
