@@ -14,7 +14,7 @@ Feature: User should be able to create a new Discount
 
     Scenario: Scenario1
       And click on Setup
-      |setup|
+      |Setup|
       And click on  Parameters
       |parameters|
       And click  on Discounts
@@ -32,7 +32,7 @@ Feature: User should be able to create a new Discount
 
   Scenario: Scenario2
     And click on Setup
-      |setup|
+      |Setup|
     And click on  Parameters
       |parameters|
     And click  on Discounts
@@ -49,7 +49,7 @@ Feature: User should be able to create a new Discount
 
   Scenario: Scenario3
     And click on Setup
-      |setup|
+      |Setup|
     And click on  Parameters
       |parameters|
     And click  on Discounts
