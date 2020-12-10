@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BasqarProject" />
-        <module name="BasqarProject_2" />
         <module name="BasqarProject - Kopya" />
+        <module name="BasqarProject_2" />
+        <module name="BasqarProject2_Son" />
       </profile>
     </annotationProcessing>
   </component>
