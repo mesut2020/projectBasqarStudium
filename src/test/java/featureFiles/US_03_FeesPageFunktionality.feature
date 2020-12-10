@@ -12,7 +12,7 @@ Feature: Fees Page Funktionality
       | loginButton |
       | gotItButton    |
 
-    Then User should login successfullyfully
+    Then User should login successfully
 
   Scenario: User should be able to create a new Fee Type
 
