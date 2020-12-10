@@ -12,7 +12,7 @@ Feature: User should be able to create a new Discount
     #Login olduğunu doğrula
     Then User should login successfully
 
-    Scenario: Name
+    Scenario: Scenario1
       And click on Setup
       |setup|
       And click on  Parameters
@@ -29,3 +29,31 @@ Feature: User should be able to create a new Discount
       |priority|0|
       Then click on Save button
       |saveButton|
+
+  Scenario: Scenario2
+    And click on Setup
+      |setup|
+    And click on  Parameters
+      |parameters|
+    And click  on Discounts
+      |discounts|
+    When click on the edit button that belongs to discount that we create before
+    Then type description on Description Box
+      |description|My Discount|
+    And type numbers on Integraiton Code Box
+      |integrationCode| 39083 |
+    And type number on Priority Box
+      |priority| 1|
+    Then click on Save button
+      |saveButton|
+
+  Scenario: Scenario3
+    And click on Setup
+      |setup|
+    And click on  Parameters
+      |parameters|
+    And click  on Discounts
+      |discounts|
+    Then click on the delete button that belongs to discount that we update before
+    And click on yes button
+      |yesButton|
