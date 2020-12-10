@@ -15,7 +15,7 @@ public class US_04_Page extends Parent{
 
 
    @FindBy(xpath = "(//span[text()='Setup'])[1]")
-   private WebElement setup;
+   private WebElement Setup;
 
     @FindBy(xpath = "//span[text()='Parameters']")
     private WebElement parameters;
@@ -69,8 +69,8 @@ public class US_04_Page extends Parent{
     public void findElementAndClickFunction(String elementName) {
 
         switch (elementName) {
-            case "setup":
-                myElement=setup;
+            case "Setup":
+                myElement=Setup;
                 break;
             case "parameters":
                 myElement=parameters;
