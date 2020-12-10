@@ -31,7 +31,7 @@ Feature: Create and delete functionality for Nationalities
     And User click on the element in the nationalitiesPOM class
       | saveButton |
 
-    Then User should see "successfully" message
+    Then User should  "successfully" message
 
     Then User edit "Turkei"
     And User sending the keys in the nationalitiesPOM class
@@ -41,7 +41,7 @@ Feature: Create and delete functionality for Nationalities
     And User click on the element in the nationalitiesPOM class
       | saveButton |
 
-    Then User should see "successfully" message
+    Then User should  "successfully" message
 
 
   Scenario: Create und Delete Nationality
@@ -59,7 +59,7 @@ Feature: Create and delete functionality for Nationalities
     And User click on the element in the nationalitiesPOM class
       | saveButton |
 
-    Then User should see "error" message
+    Then User should  "error" message
     And User click on the element in the nationalitiesPOM class
       | closeButton |
 
@@ -72,6 +72,6 @@ Feature: Create and delete functionality for Nationalities
     When User delete "Deutsch"
 
 
-    Then User should see "successfully" message
+    Then User should  "successfully" message
 
 

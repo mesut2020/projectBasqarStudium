@@ -37,10 +37,6 @@ public class US_02_nationalitiesSteps {
 
     }
 
-    @Then("^User should see \"([^\"]*)\" message$")
-    public void userShouldSeeMessage(String message)  {
-        nationalitiesPOM.findElementAndFindVerifyContainsText("success/error", message);
-    }
 
     @Then("^User edit \"([^\"]*)\"$")
     public void userEdit(String value)  {
@@ -52,5 +48,10 @@ public class US_02_nationalitiesSteps {
         nationalitiesPOM.deleteFunction(value);
         nationalitiesPOM.findElementAndClickFunction("yesButton");
 
+    }
+
+    @Then("^User should  \"([^\"]*)\" message$")
+    public void userShouldMessage(String message)  {
+        nationalitiesPOM.findElementAndFindVerifyContainsText("success/error", message);
     }
 }
