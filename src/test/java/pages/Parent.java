@@ -61,10 +61,10 @@ public class Parent {
 
     public void verifyElementContainsText(WebElement element, String text){
 
-        wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+        wait.until(ExpectedConditions.visibilityOf(element));
 
-        System.out.println(element.getText());
-        System.out.println(text);
+        System.out.println("Actual result : "+ element.getText());
+        System.out.println("Expected result : "+ text);
 
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
