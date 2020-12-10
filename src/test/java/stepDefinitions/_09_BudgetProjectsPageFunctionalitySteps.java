@@ -61,11 +61,9 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
         dContent.findElementAndFindVerifyContainsText(alert, "success");
     }
 
-    @And("^User delete the \"([^\"]*)\"$")
-    public void userDeleteThe(String value) {
-
+    @And("^User delete element name of \"([^\"]*)\"$")
+    public void userDeleteElementNameOf(String value) {
         dContent.deleteFunction(value);
-        //dContent.findElementAndClickFunction("yesButton");
     }
 
     @Then("^check the button as name of \"([^\"]*)\", should be inactive$")
@@ -73,5 +71,6 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
 
         dContent.checkElementActive(elementname);
     }
+
 
 }

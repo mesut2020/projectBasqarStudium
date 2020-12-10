@@ -50,7 +50,7 @@ Feature: User should be able to use Budget Projects Page functionality.(Budget-S
       | setupBudget    |
       | budgetProjects |
 
-    And User delete the "grp333"
+    And User delete element name of "grp333"
 
     And User click on the element at Budget Project
       | yesButton |

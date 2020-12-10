@@ -10,7 +10,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class adilSteps {
+public class US_07_NotificationsSteps {
 
     US_07_Notifications us_07_notifications=new US_07_Notifications();
     WebDriver driver= Driver.getDriver();
