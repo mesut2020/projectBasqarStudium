@@ -61,8 +61,5 @@ public class LoginSteps {
 
     }
 
-    @Then("^User should login successfullyfully$")
-    public void userShouldLoginSuccessfullyfully() {
 
-    }
 }

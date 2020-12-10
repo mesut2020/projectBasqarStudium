@@ -1,11 +1,10 @@
 package stepDefinitions;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.DialogContent;
-import pages.LeftNav;
+
 import pages.US_08_InventoryPages;
 
 import java.util.List;
@@ -13,7 +12,7 @@ public class US_08_InventorySteps {
 
     US_08_InventoryPages inventoryPages = new US_08_InventoryPages();
 
-    LeftNav leftNav=new LeftNav();
+
     DialogContent dialogContent=new DialogContent();
 
     @And("^Click on the element in the left class$")
