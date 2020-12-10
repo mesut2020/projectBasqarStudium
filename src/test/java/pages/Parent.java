@@ -40,7 +40,7 @@ public class Parent {
     public void clickFunction(WebElement element)
     {
         waitUntilClickable(element);
-        scrollToElement(element);
+       scrollToElement(element);
         element.click();
     }
 
@@ -67,5 +67,10 @@ public class Parent {
         System.out.println(text);
 
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
+    }
+
+
+    public WebElement randomSelectFromList(List<WebElement> elementsList) {
+        return elementsList.get((int)(Math.random() * elementsList.size()));
     }
 }
