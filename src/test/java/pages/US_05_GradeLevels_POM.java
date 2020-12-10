@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-public class US_05_POM extends Parent{
+public class US_05_GradeLevels_POM extends Parent{
 
     WebElement myElement ;
     List<WebElement> myList ;
 
-    public US_05_POM() {
+    public US_05_GradeLevels_POM() {
         PageFactory.initElements(driver,this);
 
     }
