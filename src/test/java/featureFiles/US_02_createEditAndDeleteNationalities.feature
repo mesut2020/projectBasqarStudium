@@ -33,7 +33,8 @@ Feature: Create and delete functionality for Nationalities
 
     Then User should give a  "successfully" message
 
-    Then User edit "Turkei"
+    Then User edit in "Turkei"
+
     And User sending the keys in the nationalitiesPOM class
       | name | Deutsch |
 
@@ -69,7 +70,7 @@ Feature: Create and delete functionality for Nationalities
     And User click on the element in the nationalitiesPOM class
       | search |
 
-    When User delete "Deutsch"
+    When User delete in "Deutsch"
 
 
     Then User should give a  "successfully" message
