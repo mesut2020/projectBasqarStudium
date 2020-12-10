@@ -63,8 +63,8 @@ public class Parent {
 
         wait.until(ExpectedConditions.visibilityOf(element));
 
-        System.out.println(element.getText());
-        System.out.println(text);
+        System.out.println("Actual result : "+ element.getText());
+        System.out.println("Expected result : "+ text);
 
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
