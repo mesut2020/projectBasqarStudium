@@ -34,6 +34,7 @@ public class US_01_citizenshipPOM extends Parent {
     @FindAll({    @FindBy(css = "ms-edit-button.ng-star-inserted>button")     }) private List<WebElement> editButtons;
     @FindAll({    @FindBy(css = "ms-delete-button.ng-star-inserted>button")   }) private List<WebElement> deleteButtons;
 
+    @FindBy(css = "div#toast-container")    private WebElement message;
 
     public void findElementAndClick(String elementName){
         switch(elementName){
@@ -56,6 +57,15 @@ public class US_01_citizenshipPOM extends Parent {
             case "shortName" : element = shortName; break;
         }
         sendKeysFunction(element, data);
+    }
+
+    public void findElementAndFindVerifyContainsText(String elementName, String text) {
+        switch (elementName) {
+
+            case "message":element = message;  break;
+        }
+
+        verifyElementContainsText(element, text);
     }
 
     public void deleteItemFunction(String value){

@@ -47,7 +47,7 @@ public class US_01_citizenshipSteps {
 
     @Then("^user should see the message \"([^\"]*)\"$")
     public void userShouldSeeTheMessage(String data) {
-        dialogContent.findElementAndFindVerifyContainsText("message", data);
+        citizenshipPOM.findElementAndFindVerifyContainsText("message", data);
     }
 
     @Then("^\"([^\"]*)\" shouldn't be deleted$")

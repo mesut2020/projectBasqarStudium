@@ -22,14 +22,12 @@ public class DialogContent extends Parent {
     @FindBy(linkText = "Got it!")    private WebElement gotItButton;
     @FindAll({@FindBy(linkText = "Got it!")})    private List<WebElement> gotItBtns;
     @FindBy(xpath = "//span[text()='Dashboard ']")    private WebElement dashboard;
-    @FindBy(css = "div#toast-container")    private WebElement message;
 
     public void findElementAndClickFunction(String elementName) {
 
         switch (elementName) {
             case "loginButton": myElement = loginButton;  break;
-            case "gotItButton": if (gotItBtns.size() == 0) return; myElement = gotItButton;
-                break;
+            case "gotItButton": if (gotItBtns.size() == 0) return; myElement = gotItButton; break;
         }
 
         clickFunction(myElement);
@@ -39,12 +37,8 @@ public class DialogContent extends Parent {
     public void findElementAndSendKeysFunction(String elementName, String value) {
 
         switch (elementName) {
-            case "username":
-                myElement = username;
-                break;
-            case "password":
-                myElement = password;
-                break;
+            case "username": myElement = username;  break;
+            case "password": myElement = password;  break;
         }
 
         sendKeysFunction(myElement, value);
@@ -53,13 +47,8 @@ public class DialogContent extends Parent {
 
     public void findElementAndFindVerifyContainsText(String elementName, String text) {
         switch (elementName) {
-            case "dashboard":
-                myElement = dashboard;
-                break;
+            case "dashboard": myElement = dashboard;break;
 
-            case "message":
-                myElement = message;
-                break;
         }
 
         verifyElementContainsText(myElement, text);
