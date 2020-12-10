@@ -50,8 +50,10 @@ public class US_02_nationalitiesSteps {
 
     }
 
-    @Then("^User should  \"([^\"]*)\" message$")
-    public void userShouldMessage(String message)  {
+
+
+    @Then("^User should give a  \"([^\"]*)\" message$")
+    public void userShouldGiveAMessage(String message) {
         nationalitiesPOM.findElementAndFindVerifyContainsText("success/error", message);
     }
 }
