@@ -49,8 +49,8 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
 
     }
 
-    @When("^User click on the element$")
-    public void userClickOnTheElement(DataTable elements) {
+    @When("^User click on the element at Budget Project$")
+    public void userClickOnTheElementAtBudgetProject(DataTable elements) {
 
         List<String> elementsToClick=elements.asList(String.class);
 
@@ -59,7 +59,6 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
             dContent.findElementAndClickFunction(elementsToClick.get(i));
 
         }
-
     }
 
     @Then("^Send value to element's inputbox$")
@@ -83,13 +82,10 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
         System.out.println("Görünen string: " + title);
 
         Assert.assertEquals(myText,title);
-
     }
 
-
-
-    @Then("^User should see \"([^\"]*)\" message$")
-    public void userShouldSeeMessage(String alert) {
+    @Then("^User should see \"([^\"]*)\" message at Budget Project$")
+    public void userShouldSeeMessageAtBudgetProject(String alert) {
 
         dContent.findElementAndFindVerifyContainsText(alert, "success");
     }
@@ -99,35 +95,12 @@ public class _09_BudgetProjectsPageFunctionalitySteps {
 
         dContent.deleteFunction(value);
         //dContent.findElementAndClickFunction("yesButton");
-
     }
 
     @Then("^check the button as name of \"([^\"]*)\", should be inactive$")
     public void checkTheButtonAsNameOfShouldBeInactive(String elementname) {
 
         dContent.checkElementActive(elementname);
-
-//        System.out.println("Texti:  "   +elementname.getText());
-//        System.out.println("Enable mi? " + elementname.isEnabled());
-//        System.out.println("Displayed mi? " + elementname.isDisplayed());
-
-        //Assert.assertFalse(elementname.isEnabled());
-
     }
-
-
-//    @When("^User sending the keys in the dialog content class$")
-//    public void userSendingTheKeysInTheDialogContentClass(DataTable elements) {
-//
-//        List<List<String>> elementsNameAndValue = elements.asLists(String.class);
-//
-//        for (int i = 0; i < elementsNameAndValue.size(); i++) {
-////            System.out.println(elementsNameAndValue.get(i).get(0));  // elemenaın adı
-////            System.out.println(elementsNameAndValue.get(i).get(1));  // elemanın gönderilecek değeri
-//            dialogContent.findElementAndSendKeysFunction(elementsNameAndValue.get(i).get(0), elementsNameAndValue.get(i).get(1));
-//        }
-//    }
-
-
 
 }
