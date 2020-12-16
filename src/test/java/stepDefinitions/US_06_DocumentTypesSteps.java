@@ -11,6 +11,8 @@ import pages.DialogContent;
 import pages.Parent;
 import pages.US_06_DocumentTypesPOM;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 
@@ -20,6 +22,9 @@ public class US_06_DocumentTypesSteps extends Parent {
 
 
     US_06_DocumentTypesPOM document_Types = new US_06_DocumentTypesPOM();
+
+    public US_06_DocumentTypesSteps() {
+    }
 
 
     @When("^User click on the elements in Document Types Page$")
@@ -54,4 +59,14 @@ public class US_06_DocumentTypesSteps extends Parent {
     }
 
 
+    @And("^user click tab$")
+    public void userClickTab() {
+        try {
+            Robot robot = new Robot();
+            robot.setAutoDelay(50);
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+        } catch (AWTException e) {
+        }
+    }
 }

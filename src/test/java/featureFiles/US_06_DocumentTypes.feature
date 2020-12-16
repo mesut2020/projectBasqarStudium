@@ -16,9 +16,9 @@ Feature: Document Types Page Functionality
   Scenario:  View Document Types Page
 
     When User click on the elements in Document Types Page
-      | setup         |
-      | parameters    |
-      | documentTypes |
+     # | setup         |
+     # | parameters    |
+     # | documentTypes |
 
 
   Scenario:  Create a Document
@@ -30,12 +30,13 @@ Feature: Document Types Page Functionality
       | addButton     |
       | stage |
       | option1 |
-      | namebox |
+
+      And user click tab
+
     And Userr sending the keys
-      | namebox | eakkk |
+      | namebox | eakkk22 |
 
     And User click on the elements in Document Types Page
-
 
       | saveButton  |
 
@@ -49,7 +50,7 @@ Feature: Document Types Page Functionality
       | parameters    |
       | documentTypes |
 
-    Then Userr "edit" "eakkk"
+    Then Userr "edit" "eakkk22"
 
     And Userr sending the keys
       | namebox | AKGdocument |
@@ -59,12 +60,12 @@ Feature: Document Types Page Functionality
 
     Then Userr should see "succes" message
 
-  Scenario:  Search and delete Document
+ # Scenario:  Search and delete Document
 
-    When User click on the elements in Document Types Page
-      | setup         |
-      | parameters    |
-      | documentTypes |
+  #  When User click on the elements in Document Types Page
+    #  | setup         |
+    #  | parameters    |
+   #   | documentTypes |
 
 
     And Userr sending the keys
