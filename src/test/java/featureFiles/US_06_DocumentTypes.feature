@@ -16,9 +16,9 @@ Feature: Document Types Page Functionality
   Scenario:  View Document Types Page
 
     When User click on the elements in Document Types Page
-     # | setup         |
-     # | parameters    |
-     # | documentTypes |
+      | setup         |
+      | parameters    |
+      | documentTypes |
 
 
   Scenario:  Create a Document
@@ -60,12 +60,12 @@ Feature: Document Types Page Functionality
 
     Then Userr should see "succes" message
 
- # Scenario:  Search and delete Document
+  Scenario:  Search and delete Document
 
-  #  When User click on the elements in Document Types Page
-    #  | setup         |
-    #  | parameters    |
-   #   | documentTypes |
+    When User click on the elements in Document Types Page
+      | setup         |
+      | parameters    |
+     | documentTypes |
 
 
     And Userr sending the keys
