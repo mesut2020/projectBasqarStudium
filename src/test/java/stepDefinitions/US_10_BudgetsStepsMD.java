@@ -76,12 +76,4 @@ public class US_10_BudgetsStepsMD implements US_10_BudgetsLocators {
         $(deleteButton).shouldBe(Condition.appear).click();
         $(yesButton).click();
     }
-
-    @When("^user clicks following element\\(s\\)$")
-    public void userClicksFollowingElementS(DataTable dataTable) {
-        List<Enum> dataByList = dataTable.asList(Enum.class);
-        for (int i = 0; i < dataByList.size(); i++) {
-
-        }
-    }
 }

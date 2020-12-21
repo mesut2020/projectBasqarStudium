@@ -25,9 +25,3 @@ Feature: Budget page functionality
     When user goes to Budgets page
     And user delete existing BUdget
     Then user should see the message "Budget successfully deleted" on the screen
-
-  Scenario: TC_00 User should be able to view Budgets page
-    When user clicks following element(s)
-      | budget  |
-      | budgets |
-    Then user should see the page title as "Budgets"
