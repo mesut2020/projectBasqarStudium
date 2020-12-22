@@ -34,6 +34,7 @@ public interface US_10_BudgetsLocators {
     By deleteButton = By.tagName("ms-delete-button");
     By editButton = By.tagName("ms-edit-button");
     By yesButton = By.cssSelector("button[type='submit']");
+    By names = By.cssSelector("tbody>tr>td:nth-child(2)");
 
     By message = By.cssSelector("#toast-container");
 
