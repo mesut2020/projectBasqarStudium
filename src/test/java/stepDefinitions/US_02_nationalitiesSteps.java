@@ -43,10 +43,10 @@ public class US_02_nationalitiesSteps {
         nationalitiesPOM.findElementAndFindVerifyContainsText("success/error", message);
     }
 
-    @Then("^User edit in \"([^\"]*)\"$")
-    public void userEditIn(String value) {
-        nationalitiesPOM.editFunction(value);
-    }
+//    @Then("^User edit in \"([^\"]*)\"$")
+//    public void userEditIn(String value) {
+//        nationalitiesPOM.editFunction(value);
+//    }
 
     @When("^User delete in \"([^\"]*)\"$")
     public void userDeleteIn(String value) {

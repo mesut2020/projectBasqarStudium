@@ -54,9 +54,9 @@ public class US_07_NotificationsSteps {
         us_07_notifications.editFunction(value);
     }
 
-    @And("^User delete \"([^\"]*)\"$")
-    public void userDelete(String value)  {
-        us_07_notifications.deleteFunction(value);
-    }
+//    @And("^User delete \"([^\"]*)\"$")
+//    public void userDelete(String value)  {
+//        us_07_notifications.deleteFunction(value);
+//    }
 }
 

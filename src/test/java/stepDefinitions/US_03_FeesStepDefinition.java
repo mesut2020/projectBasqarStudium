@@ -32,11 +32,11 @@ public class US_03_FeesStepDefinition {
 
     }
 
-    @Then("^\"([^\"]*)\" message should be displayed$")
-    public void messageShouldBeDisplayed(String text) {
-        us_03_feesPage.findElementAndFindVerifyContainsText("mesaj",text);
-
-    }
+//    @Then("^\"([^\"]*)\" message should be displayed$")
+//    public void messageShouldBeDisplayed(String text) {
+//        us_03_feesPage.findElementAndFindVerifyContainsText("mesaj",text);
+//
+//    }
 
 
     @Then("^\"([^\"]*)\" should be in the list$")
