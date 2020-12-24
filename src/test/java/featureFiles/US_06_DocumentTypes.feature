@@ -31,7 +31,7 @@ Feature: Document Types Page Functionality
       | stage |
       | option1 |
 
-      And user click tab
+    And user click tab
 
     And Userr sending the keys
       | namebox | eakkk22 |
@@ -65,7 +65,7 @@ Feature: Document Types Page Functionality
     When User click on the elements in Document Types Page
       | setup         |
       | parameters    |
-     | documentTypes |
+      | documentTypes |
 
 
     And Userr sending the keys
@@ -76,7 +76,7 @@ Feature: Document Types Page Functionality
 
     Then Userr "delete" "AKGdocument"
 
-     And User click on the elements in Document Types Page
+    And User click on the elements in Document Types Page
       | yesButton |
 
     Then Userr should see "succes" message

@@ -86,16 +86,16 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "documentTypes":
                 myElement = documentTypes;
                 break;
-                case "language":
+            case "language":
                 myElement = language;
                 break;
             case "addButton":
                 myElement = addButton;
                 break;
-                case "namebox":
+            case "namebox":
                 myElement = namebox;
                 break;
-           case "closeButton":
+            case "closeButton":
                 myElement = closeButton;
                 break;
             case "saveButton":
@@ -104,7 +104,7 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "searchButton":
                 myElement = searchButton;
                 break;
-                case "documentTitle":
+            case "documentTitle":
                 myElement = documentTitle;
                 break;
 
@@ -133,10 +133,10 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "namebox":
                 myElement = namebox;
                 break;
-                case "description":
+            case "description":
                 myElement = description;
                 break;
-                case "nameSearch":
+            case "nameSearch":
                 myElement = nameSearch;
                 break;
 
@@ -181,7 +181,6 @@ public class US_06_DocumentTypesPOM extends Parent {
             }
         }
     }
-
 
 
 
