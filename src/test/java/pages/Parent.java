@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import utilities.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -36,10 +37,14 @@ public class Parent {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+
+   
+
     public void clickFunction(WebElement element) {
         waitUntilClickable(element);
         scrollToElement(element);
         element.click();
+
     }
 
     public void sendKeysFunction(WebElement element, String value) {
