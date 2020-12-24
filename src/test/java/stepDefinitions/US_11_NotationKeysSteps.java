@@ -5,6 +5,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.DialogContent;
 import pages.Parent;
 
 import pages.US_11_NotationKeysPOM;
@@ -22,16 +23,7 @@ public class US_11_NotationKeysSteps  extends Parent {
     }
 
 
-    @When("^User clicks on the elements in Page$")
-    public void UserClicksOnTheElementsInPage(DataTable elements) {
-        List<String> elementList = elements.asList(String.class);
 
-        for (int i = 0; i < elementList.size(); i++) {
-            System.out.println(elementList.get(i));
-            notationKeys.findElementAndClickFunction(elementList.get(i));
-        }
-
-    }
 
     @And("^Userrr sending the keys$")
     public void userrrSendingTheKeys(DataTable elements) {
@@ -51,7 +43,7 @@ public class US_11_NotationKeysSteps  extends Parent {
 
 
     @Then("^Userrr \"([^\"]*)\" \"([^\"]*)\"$")
-    public void user(String editorDelete, String value) {
+    public void userrr(String editorDelete, String value) {
         notationKeys.editAndDeleteFunction(editorDelete, value);
     }
 
@@ -66,17 +58,24 @@ public class US_11_NotationKeysSteps  extends Parent {
         } catch (AWTException e) {
         }
     }
-    @Then("^user should successfully view page$")
-    public void userShouldSuccessfullyViewPage() {
-
-    }
-
-    @Then("^searched key should visible$")
-    public void searchedKeyShouldVisible() {
-    }
 
     @Then("^user should confirm \"([^\"]*)\" text$")
     public void userShouldConfirmText(String text)  {
         notationKeys.findElementAndFindVerifyContainsText("notationKeysconfirm", text);
+    }
+
+    @Then("^\"([^\"]*)\" should be visible$")
+    public void shouldBeVisible(String text)  {
+        notationKeys.findElementAndCheckIfEqual(text);
+    }
+
+    @When("^User clicks on the elements in Page$")
+    public void userClicksOnTheElementsInPage(DataTable elements) {
+        List<String> elementList = elements.asList(String.class);
+
+        for (int i = 0; i < elementList.size(); i++) {
+            System.out.println(elementList.get(i));
+            notationKeys.findElementAndClickFunction(elementList.get(i));
+        }
     }
 }

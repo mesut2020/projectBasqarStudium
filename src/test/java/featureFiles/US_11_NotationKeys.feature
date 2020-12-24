@@ -35,7 +35,7 @@ Feature: Notation Keys Page Functionality
       | shortnamebox | eak     |
       | multiplerbox | 5       |
 
-    And User clicks on the elements in Page
+    When User clicks on the elements in Page
 
       | applyButton |
 
@@ -51,19 +51,19 @@ Feature: Notation Keys Page Functionality
 
 
     And Userrr sending the keys
-      | nameSearch | ea12354  |
+       | nameSearch | ea12354  |
 
     When User clicks on the elements in Page
-      | searchButton |
+       | searchButton |
 
-    Then Userrr "edit" "ea12354 "
+    Then Userrr "edit" "ea12354"
 
     And Userrr sending the keys
       | formnamebox     | ea05|
       | shortnamebox | eak2     |
       | multiplerbox | 2       |
 
-    And User clicks on the elements in Page
+    When User clicks on the elements in Page
       | applyButton  |
 
     Then Userrr should see "succes" message
@@ -83,7 +83,7 @@ Feature: Notation Keys Page Functionality
     When User clicks on the elements in Page
       | searchButton |
 
-    Then searched key should visible
+    Then  "ea05" should be visible
 
 
   Scenario:  Delete a Notation Key
