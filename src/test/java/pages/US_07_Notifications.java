@@ -27,6 +27,9 @@ public class US_07_Notifications extends Parent {
 
     @FindBy(xpath = "//span[text()='Messaging']") private WebElement messaging;
     @FindBy(xpath = "//span[text()='Notifications']") private WebElement notifications;
+    @FindBy(xpath = "//span[text()='Human Resources']") private WebElement humanResources;
+    @FindBy(xpath = "(//span[text()='Setup'])[3]") private WebElement setupHR;
+    @FindBy(xpath = "//span[text()='Position Categories']") private WebElement positionCategories;
 
 
     //TODO DIalogContent kismi
@@ -57,11 +60,14 @@ public class US_07_Notifications extends Parent {
             case "notifications": myElement = notifications;break;
             case "yesButton": myElement = yesButton;break;
             case "noButton": myElement = noButton;break;
+            case "positionCategories": myElement = positionCategories;break;
+            case "setupHR": myElement = setupHR;break;
+            case "humanResources": myElement = humanResources;break;
 
 
         }
 
-        clickFunction(myElement);
+        clickFunction(myElement);//
     }
 
 
