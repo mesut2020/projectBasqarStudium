@@ -86,7 +86,7 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "documentTypes":
                 myElement = documentTypes;
                 break;
-            case "language":
+                case "language":
                 myElement = language;
                 break;
             case "addButton":
@@ -181,7 +181,6 @@ public class US_06_DocumentTypesPOM extends Parent {
             }
         }
     }
-
 
 
 }

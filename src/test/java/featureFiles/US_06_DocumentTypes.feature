@@ -31,7 +31,7 @@ Feature: Document Types Page Functionality
       | stage |
       | option1 |
 
-    And user click tab
+      And user click tab
 
     And Userr sending the keys
       | namebox | eakkk22 |

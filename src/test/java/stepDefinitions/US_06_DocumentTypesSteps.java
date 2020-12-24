@@ -1,13 +1,13 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
-
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
 
-
-
+import pages.DialogContent;
 import pages.Parent;
 import pages.US_06_DocumentTypesPOM;
 
@@ -15,7 +15,11 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
+
 public class US_06_DocumentTypesSteps extends Parent {
+
+    // WebDriver driver;
+
 
     US_06_DocumentTypesPOM document_Types = new US_06_DocumentTypesPOM();
 
@@ -65,5 +69,4 @@ public class US_06_DocumentTypesSteps extends Parent {
         } catch (AWTException e) {
         }
     }
-
 }
