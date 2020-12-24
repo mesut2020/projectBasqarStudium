@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import utilities.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -39,9 +40,15 @@ public class Parent {
 
     public void clickFunction(WebElement element)
     {
-        waitUntilClickable(element);
-        scrollToElement(element);
-        element.click();
+        try {
+            waitUntilClickable(element);
+            scrollToElement(element);
+            element.click();
+        }catch (StaleElementReferenceException st){
+            System.out.println("Stale Element Exception");
+            clickFunction(element);
+        }
+
     }
 
     public void sendKeysFunction(WebElement element, String value)

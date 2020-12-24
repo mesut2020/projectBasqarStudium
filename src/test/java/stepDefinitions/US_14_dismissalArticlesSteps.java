@@ -25,10 +25,10 @@ public class US_14_dismissalArticlesSteps {
     @And("^User sending the keys in the dismissalArticlesPOM class$")
     public void userSendingTheKeysInTheDismissalArticlesPOMClass(DataTable elements) {
 
-        List<String> list = elements.asList(String.class);
+        List<List<String>> lists = elements.asLists(String.class);
 
-        for (int i = 0; i <list.size()/2 ; i++) {
-            dismissalArticlesPOM.findElementAndSendKeysFunction(list.get(0),list.get(1));
+        for (int i = 0; i < lists.size(); i++) {
+            dismissalArticlesPOM.findElementAndSendKeysFunction(lists.get(i).get(0),lists.get(i).get(1));
         }
 
     }
@@ -40,12 +40,14 @@ public class US_14_dismissalArticlesSteps {
 
     @Then("^User edit in \"([^\"]*)\"$")
     public void userEditIn(String value)  {
+
       dismissalArticlesPOM.editFunction(value);
     }
 
     @When("^User delete \"([^\"]*)\"$")
     public void userDelete(String value)  {
         dismissalArticlesPOM.deleteFunction(value);
-        dismissalArticlesPOM.findElementAndClickFunction("yesButton");
+
+
     }
 }

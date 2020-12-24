@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -43,8 +44,8 @@ public class US_14_dismissalArticlesPOM extends Parent {
     private WebElement search;
     @FindBy(css = "input.mat-input-element.mat-form-field-autofill-control")
     private WebElement searchName;
-    @FindBy(css = "ms-text-field[formcontrolname ='description']")
-   // @FindBy(xpath = "(//input[contains(@id,'ms-text-field')])[3]")
+   // @FindBy(css = "ms-text-field[formcontrolname ='description']")
+    @FindBy(xpath = "(//input[contains(@id,'ms-text-field')])[3]")
    // @FindBy (css = "input[data-placeholder='Description']")
     private WebElement description;
 
@@ -131,10 +132,11 @@ public class US_14_dismissalArticlesPOM extends Parent {
 
     public void deleteFunction(String value) {
 
-        if (messageList.size() > 0) {
-            // if (message.isDisplayed())
-            wait.until(ExpectedConditions.invisibilityOfAllElements(message));
-        }
+//        if (messageList.size() > 0) {
+//            // if (message.isDisplayed())
+//           // wait.until(ExpectedConditions.invisibilityOfAllElements(message));
+//
+//        }
 
         for (int i = 0; i < nameList.size(); i++) {
 
@@ -147,14 +149,16 @@ public class US_14_dismissalArticlesPOM extends Parent {
 
     public void editFunction(String value) {
 
-        if (messageList.size() > 0) {
+       // if (messageList.size() > 0) {
             // if (message.isDisplayed())
-            wait.until(ExpectedConditions.invisibilityOfAllElements(message));
-        }
+            //wait.until(ExpectedConditions.invisibilityOfAllElements(message));
 
+      // }
+            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("tbody>tr>td:nth-child(2)"),0));
         for (int i = 0; i < nameList.size(); i++) {
 
             if (nameList.get(i).getText().equalsIgnoreCase(value)) {
+                System.out.println(nameList.get(i)+ "  is found");
                 clickFunction(editButtonList.get(i));
                 break;
             }
