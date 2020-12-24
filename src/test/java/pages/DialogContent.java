@@ -54,4 +54,5 @@ public class DialogContent extends Parent {
         verifyElementContainsText(myElement, text);
     }
 
+
 }
