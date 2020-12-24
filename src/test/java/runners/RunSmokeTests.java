@@ -14,6 +14,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
                 "json:target/cucumber.json"}
 )
 
-public class RunAllTests extends AbstractTestNGCucumberTests {
+public class RunSmokeTests extends AbstractTestNGCucumberTests {
 
 }
