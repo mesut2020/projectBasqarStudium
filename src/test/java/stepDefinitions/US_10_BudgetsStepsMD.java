@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
 
+import org.openqa.selenium.WebElement;
 import pages.US_10_BudgetsLocators;
 
 import java.util.List;
@@ -67,13 +68,18 @@ public class US_10_BudgetsStepsMD implements US_10_BudgetsLocators {
         $(saveButton).shouldNotBe(Condition.enabled);
     }
 
-    @And("^user delete existing BUdget$")
-    public void userDeleteExistingBUdget() {
-        $(searchBudgetGroup).click();
+    @And("^user delete existing Budget$")
+    public void userDeleteExistingBudget() {
+        $(searchBudgetGroup).shouldBe(Condition.enabled).click();
         $$(options).get(3).click();
         $(searchSchool).click();
         $$(options).get(2).click();
-        $(deleteButton).shouldBe(Condition.appear).click();
+
+        for (int i = 0; i < $$(names).size(); i++) {
+            System.out.println($$(names).get(i).getText());
+            if($$(names).get(i).getText().equalsIgnoreCase("2020 School budget"))
+            {$$(deleteButton).get(i).click(); break;}
+        }
         $(yesButton).click();
     }
 }

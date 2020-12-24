@@ -23,5 +23,5 @@ Feature: Budget page functionality
   Scenario: TC_04 User should be able to delete  Budgets
   and view  successfully validating the message
     When user goes to Budgets page
-    And user delete existing BUdget
+    And user delete existing Budget
     Then user should see the message "Budget successfully deleted" on the screen
