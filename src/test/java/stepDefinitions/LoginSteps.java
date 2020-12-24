@@ -60,4 +60,6 @@ public class LoginSteps {
         dialogContent.findElementAndFindVerifyContainsText("dashboard","Dashboard");
 
     }
+
+
 }

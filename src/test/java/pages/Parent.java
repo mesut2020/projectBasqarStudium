@@ -22,37 +22,32 @@ public class Parent {
     }
 
 
-    public void waitUntilClickable(WebElement element){
+    public void waitUntilClickable(WebElement element) {
 
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public void waitUntilVisible(WebElement element){
+    public void waitUntilVisible(WebElement element) {
 
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void scrollToElement(WebElement element)
-    {
-        JavascriptExecutor js= (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].scrollIntoView();", element);
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    public void clickFunction(WebElement element)
-    {
-        try {
-            waitUntilClickable(element);
-            scrollToElement(element);
-            element.click();
-        }catch (StaleElementReferenceException st){
-            System.out.println("Stale Element Exception");
-            clickFunction(element);
-        }
+
+   
+
+    public void clickFunction(WebElement element) {
+        waitUntilClickable(element);
+        scrollToElement(element);
+        element.click();
 
     }
 
-    public void sendKeysFunction(WebElement element, String value)
-    {
+    public void sendKeysFunction(WebElement element, String value) {
         waitUntilVisible(element);
         scrollToElement(element);
         element.clear();
@@ -60,19 +55,24 @@ public class Parent {
     }
 
 
-    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList){
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList) {
 
         wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
         return elementList;
     }
 
-    public void verifyElementContainsText(WebElement element, String text){
+    public void verifyElementContainsText(WebElement element, String text) {
 
-        wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+        wait.until(ExpectedConditions.visibilityOf(element));
 
-        System.out.println(element.getText());
-        System.out.println(text);
+        System.out.println("Actual result : " + element.getText());
+        System.out.println("Expected result : " + text);
 
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
+    }
+
+
+    public WebElement randomSelectFromList(List<WebElement> elementsList) {
+        return elementsList.get((int) (Math.random() * elementsList.size()));
     }
 }
