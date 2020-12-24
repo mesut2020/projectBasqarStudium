@@ -48,16 +48,7 @@ public class US_11_NotationKeysSteps  extends Parent {
     }
 
 
-    @And("^user click tab$")
-    public void userClickTab() {
-        try {
-            Robot robot = new Robot();
-            robot.setAutoDelay(50);
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-        } catch (AWTException e) {
-        }
-    }
+
 
     @Then("^user should confirm \"([^\"]*)\" text$")
     public void userShouldConfirmText(String text)  {
