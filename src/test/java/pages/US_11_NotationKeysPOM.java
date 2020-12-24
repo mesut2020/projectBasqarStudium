@@ -24,7 +24,7 @@ public class US_11_NotationKeysPOM extends Parent {
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
     private WebElement setup2;
     @FindBy(xpath = "//span[text()='Notation Keys']")
-    private WebElement notationKeys ;
+    private WebElement notationKeys;
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'.ADD')]//button")
     private WebElement addButton;
     @FindBy(css = "ms-text-field[formcontrolname='name']>input")
@@ -46,11 +46,8 @@ public class US_11_NotationKeysPOM extends Parent {
     private WebElement notationKeysconfirm;
 
 
-
-
     @FindBy(xpath = "//ms-browse-search/div/div/button")
     private WebElement searchButton;
-
 
 
     @FindBy(xpath = "//ms-save-button//button")
@@ -62,11 +59,6 @@ public class US_11_NotationKeysPOM extends Parent {
     private WebElement message;
 
 
-
-
-
-
-
     @FindAll({@FindBy(css = "div#toast-container")})
     private List<WebElement> messageList;
     @FindAll({@FindBy(css = "ms-delete-button.ng-star-inserted")})
@@ -75,8 +67,6 @@ public class US_11_NotationKeysPOM extends Parent {
     private List<WebElement> edit;
     @FindAll({@FindBy(css = "tbody>tr>td:nth-child(2)")})
     private List<WebElement> nameList;
-
-
 
 
     @FindBy(css = "button[type='submit']")
@@ -98,24 +88,21 @@ public class US_11_NotationKeysPOM extends Parent {
             case "addButton":
                 myElement = addButton;
                 break;
-                case "namebox":
+            case "namebox":
                 myElement = namebox;
                 break;
-           case "closeButton":
+            case "closeButton":
                 myElement = closeButton;
                 break;
             case "saveButton":
                 myElement = saveButton;
                 break;
-                case "applyButton":
+            case "applyButton":
                 myElement = applyButton;
                 break;
             case "searchButton":
                 myElement = searchButton;
                 break;
-
-
-
 
 
             case "nameSearch":
@@ -137,20 +124,19 @@ public class US_11_NotationKeysPOM extends Parent {
             case "namebox":
                 myElement = namebox;
                 break;
-                case "shortnamebox":
+            case "shortnamebox":
                 myElement = shortnamebox;
                 break;
-                case "formnamebox":
+            case "formnamebox":
                 myElement = formnamebox;
                 break;
-                case "multiplerbox":
+            case "multiplerbox":
                 myElement = multiplerbox;
                 break;
 
-                case "nameSearch":
+            case "nameSearch":
                 myElement = nameSearch;
                 break;
-
 
 
         }
@@ -164,11 +150,11 @@ public class US_11_NotationKeysPOM extends Parent {
                 myElement = message;
                 break;
 
-                case "notation":
+            case "notation":
                 myElement = notationKeysconfirm;
                 break;
 
-                case "namelist":
+            case "namelist":
                 myElement = nameList.get(0);
                 break;
 
@@ -204,6 +190,6 @@ public class US_11_NotationKeysPOM extends Parent {
 
     public void findElementAndCheckIfEqual(String text) {
         Assert.assertEquals(nameList.get(0).getText(), text);
-        }
+    }
 
 }

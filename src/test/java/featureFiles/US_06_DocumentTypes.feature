@@ -28,17 +28,17 @@ Feature: Document Types Page Functionality
       | parameters    |
       | documentTypes |
       | addButton     |
-      | stage |
-      | option1 |
+      | stage         |
+      | option1       |
 
-      And user click tab
+    And user click tab
 
     And Userr sending the keys
       | namebox | eakkk22 |
 
     And User click on the elements in Document Types Page
 
-      | saveButton  |
+      | saveButton |
 
 
     Then Userr should see "successfully" message

@@ -1,28 +1,25 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.DialogContent;
+
 import pages.Parent;
 
 import pages.US_11_NotationKeysPOM;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
+
 import java.util.List;
 
-public class US_11_NotationKeysSteps  extends Parent {
+public class US_11_NotationKeysSteps extends Parent {
 
 
     US_11_NotationKeysPOM notationKeys = new US_11_NotationKeysPOM();
 
     public US_11_NotationKeysSteps() {
     }
-
-
 
 
     @And("^Userrr sending the keys$")
@@ -41,22 +38,19 @@ public class US_11_NotationKeysSteps  extends Parent {
     }
 
 
-
     @Then("^Userrr \"([^\"]*)\" \"([^\"]*)\"$")
     public void userrr(String editorDelete, String value) {
         notationKeys.editAndDeleteFunction(editorDelete, value);
     }
 
 
-
-
     @Then("^user should confirm \"([^\"]*)\" text$")
-    public void userShouldConfirmText(String text)  {
+    public void userShouldConfirmText(String text) {
         notationKeys.findElementAndFindVerifyContainsText("notationKeysconfirm", text);
     }
 
     @Then("^\"([^\"]*)\" should be visible$")
-    public void shouldBeVisible(String text)  {
+    public void shouldBeVisible(String text) {
         notationKeys.findElementAndCheckIfEqual(text);
     }
 

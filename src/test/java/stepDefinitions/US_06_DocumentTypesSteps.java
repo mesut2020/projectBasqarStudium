@@ -1,13 +1,12 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
 
-import pages.DialogContent;
+
 import pages.Parent;
 import pages.US_06_DocumentTypesPOM;
 

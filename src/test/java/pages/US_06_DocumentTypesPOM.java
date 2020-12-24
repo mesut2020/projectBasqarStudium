@@ -54,13 +54,10 @@ public class US_06_DocumentTypesPOM extends Parent {
     @FindBy(css = "div#toast-container")
     private WebElement message;
 
-    @FindBy (xpath="(//mat-select[@role='combobox'])[3]")
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
     private WebElement stage;
-    @FindBy (xpath="(//span[@class='mat-option-text'])[1]")
+    @FindBy(xpath = "(//span[@class='mat-option-text'])[1]")
     private WebElement option1;
-
-
-
 
 
     @FindAll({@FindBy(css = "div#toast-container")})
@@ -86,7 +83,7 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "documentTypes":
                 myElement = documentTypes;
                 break;
-                case "language":
+            case "language":
                 myElement = language;
                 break;
             case "addButton":
@@ -139,7 +136,6 @@ public class US_06_DocumentTypesPOM extends Parent {
             case "nameSearch":
                 myElement = nameSearch;
                 break;
-
 
 
         }

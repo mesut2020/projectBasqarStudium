@@ -28,10 +28,10 @@ Feature: Notation Keys Page Functionality
       | humanResources |
       | setup2         |
       | notationKeys   |
-      | addButton     |
+      | addButton      |
 
     And Userrr sending the keys
-      | formnamebox     | ea12354 |
+      | formnamebox  | ea12354 |
       | shortnamebox | eak     |
       | multiplerbox | 5       |
 
@@ -51,20 +51,20 @@ Feature: Notation Keys Page Functionality
 
 
     And Userrr sending the keys
-       | nameSearch | ea12354  |
+      | nameSearch | ea12354 |
 
     When User clicks on the elements in Page
-       | searchButton |
+      | searchButton |
 
     Then Userrr "edit" "ea12354"
 
     And Userrr sending the keys
-      | formnamebox     | ea05|
-      | shortnamebox | eak2     |
-      | multiplerbox | 2       |
+      | formnamebox  | ea05 |
+      | shortnamebox | eak2 |
+      | multiplerbox | 2    |
 
     When User clicks on the elements in Page
-      | applyButton  |
+      | applyButton |
 
     Then Userrr should see "succes" message
 
