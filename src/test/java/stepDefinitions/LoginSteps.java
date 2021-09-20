@@ -21,7 +21,7 @@ public class LoginSteps {
     public void navigateToBasqar() {
 
         driver= Driver.getDriver();
-        driver.get("https://test.basqar.techno.study/");
+        driver.get("https://demo.mersys.io/");
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);

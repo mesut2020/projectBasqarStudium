@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 public interface US_10_BudgetsLocators {
 
-    String url = "https://test.basqar.techno.study/";
-    String uName = "daulet2030@gmail.com";
-    String pass = "TechnoStudy123@";
+    String url = "https://demo.mersys.io/";
+    String uName = "richfield.edu";
+    String pass = "Richfield2020!";
 
     By username = By.cssSelector("input[formcontrolname='username']");
     By password = By.cssSelector("input[formcontrolname='password']");

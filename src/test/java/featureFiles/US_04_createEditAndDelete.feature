@@ -4,8 +4,8 @@ Feature: User should be able to create a new Discount
     Given Navigate to basqar
     #username ve passwordu gir ve login butonuna tıklat
     When User sending the keys in the dialog content class
-      | username | daulet2030@gmail.com |
-      | password | TechnoStudy123@      |
+      | username | richfield.edu  |
+      | password | Richfield2020! |
     And User click on the element in the dialog content class
       | loginButton |
       | gotItButton    |
