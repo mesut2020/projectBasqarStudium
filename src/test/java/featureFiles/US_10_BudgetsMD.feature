@@ -1,7 +1,7 @@
 Feature: Budget page functionality
 
   Background:
-    Given user goes to basqar "https://test.basqar.techno.study/"
+    Given user goes to basqar "https://demo.mersys.io/"
     And user login to basqar with credentials
     Then user should see the page title as "Dashboard"
 
